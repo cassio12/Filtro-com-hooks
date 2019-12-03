@@ -53,7 +53,8 @@ const App = () => {
                     </tr>
                     {courses
                     .filter((course) => (
-                        lower(course.name).includes(lower(corseName))
+                        lower(course.name).includes(lower(corseName)) && 
+                        lower(course.hours).includes(lower(corseHours))
                     ))
                     .map((course) => (
                         <tr key={course.name}>
